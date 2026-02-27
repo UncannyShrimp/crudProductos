@@ -22,7 +22,7 @@ class ProductosFactory extends Factory
             'precio' => fake()->randomFloat(2, 0, 100),
             'stock' => fake()->randomNumber(2),
             'estado' => true,
-            'imagen' => fake()->imageUrl(),
+            'imagen' => "images/cepillo.jpg",
         ];
     }
 }
