@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
+            $table->string('imagen');
             $table->string('descripcion');
             $table->decimal('precio', 8, 2);
             $table->integer('stock');
@@ -27,6 +28,7 @@ return new class extends Migration
         DB::table('productos')->insert([
             [
                 'nombre' => 'Cepillo de dientes',
+                'imagen' => 'resources/images/cepillo-de-dientes.jpg',
                 'descripcion' => 'Cepillo color azul para dientes',
                 'precio' => 1.99,
                 'stock' => 10,
@@ -36,6 +38,7 @@ return new class extends Migration
             ],
             [
                 'nombre' => 'Enjuague bucal',
+                'imagen' => 'resources/images/enjuague-bucal.jpg',
                 'descripcion' => 'Enjuague bucal para dientes',
                 'precio' => 9.50,
                 'stock' => 5,
