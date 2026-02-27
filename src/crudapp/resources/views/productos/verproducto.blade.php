@@ -1,11 +1,5 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUTAITA</title>
-</head>
-<body>
-    //DETALLES DEL PRODUCTO
+<x-layout>
+
     <h1>DETALLES DEL PRODUCTO</h1>
     <h2>{{ $id }}</h2>
     <h2>{{ $producto->nombre }}</h2>
@@ -21,8 +15,4 @@
         @endif
     </h2>
     <a href="/productos">Volver</a>
-
-
-    
-</body>
-</html>
+</x-layout>
