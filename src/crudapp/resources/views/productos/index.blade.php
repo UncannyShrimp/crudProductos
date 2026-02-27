@@ -3,20 +3,22 @@
     <ul>
         @foreach ($productos as $producto)
             <li>
-                <p>{{ $producto->nombre }}</p>
-                <p>{{ $producto->imagen }}</p>
-                <p>{{ $producto->descripcion }}</p>
-                <p>{{ $producto->precio }}</p>
-                <p>{{ $producto->stock }}</p>
-                <p>
-                    @if ($producto->estado == true)
-                        Activo
-                    @else
-                        Inactivo
-                    @endif
-                </p>
-                <a href="/productos/{{ $producto->id }}"> Ver Detalles</a>
-                <a href="/productos/editar/{{ $producto->id }}"> Editar</a>
+                <x-card href="productos/{{ $producto->id }}">
+                    <h3>{{ $producto->nombre }}</h3>
+                    <img src="{{ $producto->imagen }}" alt="image">
+                    <img src="{{ Storage::url('images/cepillo.jpg') }}" alt="Photo" class="img-fluid">
+                    <p>{{ $producto->descripcion }}</p>
+                    <p>{{ $producto->precio }}</p>
+                    <p>{{ $producto->stock }}</p>
+                    <p>
+                        @if ($producto->estado == true )
+                            Activo   
+                        @else
+                            Inactivo
+                        @endif
+                    </p>
+
+                </x-card>
             </li>
         @endforeach
     </ul>

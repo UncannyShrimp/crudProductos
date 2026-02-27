@@ -15,14 +15,7 @@ Route::get('/productos', function () {
 
 //RUTA DE CREAR PRODUCTO
 Route::get('/productos/crear', function () {
-    return view('productos.crearproducto', ["titulo"=>"Crear Producto"]);
-});
-
-//RUTA DE VER PRODUCTO
-Route::get('/productos/{id}', function ($id) {
-    $producto = DB::table('productos')->where('id', $id)->first();
-    return view('productos.verproducto',  ["producto" => $producto], ["id" => $id]);
-
+    return view('productos.crearproducto');
 });
 
 //RUTA DE EDITAR PRODUCTO
@@ -31,5 +24,9 @@ Route::get('/productos/editar/{id}', function ($id) {
     return view('productos.editarproducto', ["producto" => $producto], ["id" => $id]);
 });
 
+//RUTA DE VER PRODUCTO
+Route::get('/productos/{id}', function ($id) {
+    $producto = DB::table('productos')->where('id', $id)->first();
+    return view('productos.verproducto',  ["producto" => $producto], ["id" => $id]);
 
-
+});
