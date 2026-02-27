@@ -5,8 +5,7 @@
             <li>
                 <x-card href="productos/{{ $producto->id }}">
                     <h3>{{ $producto->nombre }}</h3>
-                    <img src="{{ $producto->imagen }}" alt="image">
-                    <img src="{{ Storage::url('images/cepillo.jpg') }}" alt="Photo" class="img-fluid">
+                    <img src="{{ $producto->imagen }}" alt="image" width="200" height="200">
                     <p>{{ $producto->descripcion }}</p>
                     <p>{{ $producto->precio }}</p>
                     <p>{{ $producto->stock }}</p>

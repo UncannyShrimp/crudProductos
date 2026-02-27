@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('imagen');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->decimal('precio', 8, 2);
             $table->integer('stock');
             $table->boolean('estado');
@@ -28,7 +28,7 @@ return new class extends Migration
         DB::table('productos')->insert([
             [
                 'nombre' => 'Cepillo de dientes',
-                'imagen' => 'resources/images/cepillo-de-dientes.jpg',
+                'imagen' => 'images/cepillo.jpg',
                 'descripcion' => 'Cepillo color azul para dientes',
                 'precio' => 1.99,
                 'stock' => 10,
@@ -38,7 +38,7 @@ return new class extends Migration
             ],
             [
                 'nombre' => 'Enjuague bucal',
-                'imagen' => 'resources/images/enjuague-bucal.jpg',
+                'imagen' => 'images/enjuague-bucal.jpg',
                 'descripcion' => 'Enjuague bucal para dientes',
                 'precio' => 9.50,
                 'stock' => 5,
