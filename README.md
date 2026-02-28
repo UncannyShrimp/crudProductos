@@ -23,50 +23,50 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
 - laravel (Laravel Framework 12.53.0)
 
 ## Instalación y uso local (paso a paso usando Git Bash)
-![alt text](image-11.png)
+![alt text](Readmeimages/image-11.png)
 
 1. **Clonar el repositorio**
 
    git clone https://github.com/UncannyShrimp/crudProductos.git
 
-   ![alt text](image-3.png)
+   ![alt text](Readmeimages/image-3.png)
 
 2. **Entrar en el directorio crudapp**
 
     cd crudproductos/src/crudapp
-    ![alt text](image-4.png)
+    ![alt text](Readmeimages/image-4.png)
 
 
 2. **Instalar dependencias de PHPBash**
 
     composer install
-    ![alt text](image-5.png)
+    ![alt text](Readmeimages/image-5.png)
 
 3. **Copiar el archivo de entorno**
 
     cp .env.example .env
-    ![alt text](image-6.png)
+    ![alt text](Readmeimages/image-6.png)
 
 4. **Genarar la llave del proyecto**
 
     php artisan key:generate
-    ![alt text](image-7.png)
+    ![alt text](Readmeimages/image-7.png)
 
 4. **Generar la Base de Datos SQLite**
 
     touch database/database.sqlite
-    ![alt text](image-8.png)
+    ![alt text](Readmeimages/image-8.png)
 
 5. **Crear enlace simbólico para storage (donde guaradmos las imagenes)**
 
     php artisan storage:link
-    ![alt text](image-10.png)
+    ![alt text](Readmeimages/image-10.png)
     
 6. **Ejecutar migraciones + cargar datos de ejemplo**
 
     php artisan migrate:fresh --seed
 
-    ![alt text](image-9.png)
+    ![alt text](Readmeimages/image-9.png)
 
 - Qué hace este comando:
 - Borra todas las tablas (si existen)
@@ -78,7 +78,7 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
  7. **Iniciar el servidor de desarrollo** 
 
     php artisan serve 
-    ![alt text](image.png)
+    ![alt text](Readmeimages/image.png)
 
 
 Hecho por Andres Jimenez (ITSCO:2026)
