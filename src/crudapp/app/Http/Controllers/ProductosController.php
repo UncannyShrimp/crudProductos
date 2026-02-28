@@ -7,6 +7,7 @@ use App\Models\Productos;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
+
 class ProductosController extends Controller
 {
     public function index()
@@ -44,8 +45,8 @@ class ProductosController extends Controller
             $file = $request->file('imagen');
             $originalExtension = $file->getClientOriginalExtension();
 
-            // Nombre único: slug del nombre + fecha + microsegundos
-            $nombreBase = $validated['nombre'] . "-";
+            // Nombre único: nombre + fecha + microsegundos
+            $nombreBase = $validated['nombre'];
             $fechaUnica = now()->format('Ymd-His');
             $nombreImagen = "{$nombreBase}-{$fechaUnica}.{$originalExtension}";
 
@@ -104,11 +105,18 @@ class ProductosController extends Controller
 
     public function destruir($id)
     {
-        //
-    }
-
-    public function desactivar($id)
-    {
-        //
+        $producto = Productos::findOrFail($id);
+        $imagen = $producto->imagen;
+        // Verificar si hay otros productos con la misma imagen
+        $otrosProductosConMismaImagen = Productos::where('imagen', $imagen)->where('id', '!=', $id)->get();
+        // Si no hay otros productos con la misma imagen, eliminar la imagen
+        if ($otrosProductosConMismaImagen->isEmpty()) {
+            if ($imagen && Storage::disk('public')->exists(str_replace('storage/', '', $imagen))) {
+                Storage::disk('public')->delete(str_replace('storage/', '', $imagen));
+            }
+        }
+        $producto->delete();
+        return redirect()->route('productos.index')
+            ->with('success', 'Producto eliminado correctamente');
     }
 }

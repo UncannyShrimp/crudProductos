@@ -9,10 +9,16 @@
     <h2>{{ $producto->stock }}</h2>
     <h2>
         @if ($producto->estado == true )
-            Activo   
+        Activo
         @else
-            Inactivo
+        Inactivo
         @endif
     </h2>
     <a href="{{ route('productos.index') }}" class="btn btn-primary">Volver</a>
+    <form action="{{ route('productos.destruir', $producto->id) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Borrar</button>
+
+    </form>
 </x-layout>

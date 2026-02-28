@@ -20,7 +20,5 @@ Route::post('/productos', [ProductosController::class, 'guardar']) -> name('prod
 Route::get('/productos/editar/{id}', [ProductosController::class, 'editar']) -> name('productos.editar');
 //RUTA DE ACTUALIZAR PRODUCTO
 Route::put('/productos/{id}', [ProductosController::class, 'actualizar']) -> name('productos.actualizar');
-//RUTA DE DESTRUIR PRODUCTO
+//RUTA DE BORRAR PRODUCTO
 Route::delete('/productos/{id}', [ProductosController::class, 'destruir']) -> name('productos.destruir');
-//RUTA DE DESACTIVAR PRODUCTO
-Route::get('/productos/desactivar/{id}', [ProductosController::class, 'desactivar']) -> name('productos.desactivar');
