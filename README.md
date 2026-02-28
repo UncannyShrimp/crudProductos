@@ -19,6 +19,7 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
 
 - PHP ≥ 8.1  
 - Composer  
+- Git
 
 ## Instalación y uso local (paso a paso)
 
@@ -30,9 +31,8 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
 
 2. **Entrar en el directorio crudapp**
 
-    cd crudapp
+    cd crudproductos/src/crudapp
 
-    ![alt text](image.png)
 
 2. **Instalar dependencias de PHPBash**
 
