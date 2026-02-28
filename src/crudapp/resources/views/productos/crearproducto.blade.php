@@ -6,31 +6,31 @@
 
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" name="nombre" id="nombre" value="{{ old('nombre') }}" required>
+            <input type="text" class="form-control" name="nombre" id="nombre" value="{{ old('nombre') }}" >
             @error('nombre') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="mb-3">
             <label for="descripcion" class="form-label">Descripción</label>
-            <textarea class="form-control" name="descripcion" id="descripcion" rows="3" required>{{ old('descripcion') }}</textarea>
+            <textarea class="form-control" name="descripcion" id="descripcion" rows="3"  value="{{ old('descripcion') }}"></textarea>
             @error('descripcion') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="mb-3">
             <label for="precio" class="form-label">Precio</label>
-            <input type="number" step="0.01" class="form-control" name="precio" id="precio" value="{{ old('precio') }}" required min="0">
+            <input type="number" step="0.01" class="form-control" name="precio" id="precio" value="{{ old('precio') }}" >
             @error('precio') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="mb-3">
             <label for="stock" class="form-label">Stock</label>
-            <input type="number" class="form-control" name="stock" id="stock" value="{{ old('stock') }}" required min="0">
+            <input type="number" class="form-control" name="stock" id="stock" value="{{ old('stock') }}" >
             @error('stock') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="mb-3">
             <label for="imagen" class="form-label">Imagen del producto</label>
-            <input type="file" class="form-control" name="imagen" id="imagen" accept="image/*" required>
+            <input type="file" class="form-control" name="imagen" id="imagen" accept="image/*" >
             @error('imagen') <span class="text-danger">{{ $message }}</span> @enderror
 
             <!-- Área de previsualización -->
