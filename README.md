@@ -1,4 +1,4 @@
-# crudProductos
+# crudProductos (ANDRES JIMENEZ)
 # CRUD Básico de Productos - Laravel + SQLite
 
 Proyecto sencillo en **Laravel** con un **CRUD completo** de productos (Crear, Leer, Actualizar, Eliminar), utilizando **SQLite** como base de datos por defecto. 
@@ -34,35 +34,41 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
 2. **Entrar en el directorio crudapp**
 
     cd crudproductos/src/crudapp
+   
     ![alt text](Readmeimages/image-4.png)
 
 
 2. **Instalar dependencias de PHPBash**
 
     composer install
+   
     ![alt text](Readmeimages/image-5.png)
 
-3. **Copiar el archivo de entorno**
+4. **Copiar el archivo de entorno**
 
     cp .env.example .env
+   
     ![alt text](Readmeimages/image-6.png)
 
-4. **Genarar la llave del proyecto**
+6. **Genarar la llave del proyecto**
 
     php artisan key:generate
+   
     ![alt text](Readmeimages/image-7.png)
 
 4. **Generar la Base de Datos SQLite**
 
     touch database/database.sqlite
+   
     ![alt text](Readmeimages/image-8.png)
 
-5. **Crear enlace simbólico para storage (donde guaradmos las imagenes)**
+6. **Crear enlace simbólico para storage (donde guaradmos las imagenes)**
 
     php artisan storage:link
+   
     ![alt text](Readmeimages/image-10.png)
     
-6. **Ejecutar migraciones + cargar datos de ejemplo**
+8. **Ejecutar migraciones + cargar datos de ejemplo**
 
     php artisan migrate:fresh --seed
 
