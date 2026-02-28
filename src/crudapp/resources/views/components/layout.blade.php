@@ -5,6 +5,12 @@
     <title>TUTAITA</title>
 </head>
 <body>
+    @if(session('success'))
+        <div id="flash" class="alert alert-success">
+            {{ session('success') }}
+        </div>
+
+    @endif
     <header>
         <nav>
 
