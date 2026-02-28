@@ -27,37 +27,44 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
 
    git clone https://github.com/UncannyShrimp/crudProductos.git
 
-   cd TU-REPOSITORIO
+   ![alt text](image-3.png)
 
 2. **Entrar en el directorio crudapp**
 
     cd crudproductos/src/crudapp
+    ![alt text](image-4.png)
 
 
 2. **Instalar dependencias de PHPBash**
 
     composer install
+    ![alt text](image-5.png)
 
 3. **Copiar el archivo de entorno**
 
     cp .env.example .env
+    ![alt text](image-6.png)
 
-4. **Base de Datos SQLite**
-
-→ No necesitas modificar .env
-Ya viene configurado para usar SQLite:env
-    DB_CONNECTION=sqlite
-    # DB_DATABASE=database/database.sqlite
-
-5. **Generar la clave de la aplicación**
+4. **Genarar la llave del proyecto**
 
     php artisan key:generate
+    ![alt text](image-7.png)
 
+4. **Generar la Base de Datos SQLite**
+
+    touch database/database.sqlite
+    ![alt text](image-8.png)
+
+5. **Crear enlace simbólico para storage (donde guaradmos las imagenes)**
+
+    php artisan storage:link
+    ![alt text](image-10.png)
+    
 6. **Ejecutar migraciones + cargar datos de ejemplo**
 
     php artisan migrate:fresh --seed
 
-    ![alt text](image-2.png)
+    ![alt text](image-9.png)
 
 - Qué hace este comando:
 - Borra todas las tablas (si existen)
@@ -65,10 +72,6 @@ Ya viene configurado para usar SQLite:env
 - Inserta 2 productos de ejemplo:
 - - Cepillo de dientes – $1.99 – stock 10
 - - Enjuague bucal – $9.50 – stock 5
-
-7. **Crear enlace simbólico para storage**
-
-    php artisan storage:link
 
  7. **Iniciar el servidor de desarrollo** 
 
