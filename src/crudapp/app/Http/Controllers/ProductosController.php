@@ -77,10 +77,6 @@ class ProductosController extends Controller
 
         // Manejar la imagen (solo si se subió una nueva)
         if ($request->hasFile('imagen') && $request->file('imagen')->isValid()) {
-            // Opcional: eliminar la imagen anterior si existe
-            if ($producto->imagen && Storage::disk('public')->exists(str_replace('storage/', '', $producto->imagen))) {
-                Storage::disk('public')->delete(str_replace('storage/', '', $producto->imagen));
-            }
 
             $file = $request->file('imagen');
             $originalExtension = $file->getClientOriginalExtension();
