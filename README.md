@@ -18,8 +18,9 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
 ## Requisitos mínimos
 
 - PHP ≥ 8.1  (instalado)  
-- Composer (instalado)  
-- Git (instalado)  
+- Composer (instalado version 2.9.5)  
+- Git (instalado git version 2.53.0.windows.1)  
+- laravel (Laravel Framework 12.53.0)
 
 ## Instalación y uso local (paso a paso usando Git Bash)
 ![alt text](image-11.png)
