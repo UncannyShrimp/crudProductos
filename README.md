@@ -25,6 +25,7 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
 1. **Clonar el repositorio**
 
    git clone https://github.com/UncannyShrimp/crudProductos.git
+
    cd TU-REPOSITORIO
 
 2. **Entrar en el directorio crudapp**
@@ -56,7 +57,7 @@ Ya viene configurado para usar SQLite:env
 
     php artisan migrate:fresh --seed
 
-    ![alt text](image-1.png)
+    ![alt text](image-2.png)
 
 - Qué hace este comando:
 - Borra todas las tablas (si existen)
@@ -72,7 +73,7 @@ Ya viene configurado para usar SQLite:env
  7. **Iniciar el servidor de desarrollo** 
 
     php artisan serve 
-    ![alt text](image.png) 
+    ![alt text](image.png)
 
 
 Hecho por Andres Jimenez (ITSCO:2026)
