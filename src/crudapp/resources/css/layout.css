@@ -1,0 +1,45 @@
+:root {
+    --electric-blue:   #00f0ff;     /* cian eléctrico brillante */
+    --deep-electric:   #00b7eb;     /* azul más oscuro para hover/active */
+    --neon-yellow:     #ffff00;     /* amarillo neón puro */
+    --dark-bg:         #0a1f2e;     /* fondo muy oscuro para contraste */
+}
+
+.navbar-tutaita {
+    background-color: var(--dark-bg) !important;
+    border-bottom: 3px solid var(--electric-blue);
+}
+
+.navbar-brand {
+    color: var(--neon-yellow) !important;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-shadow: 0 0 10px rgba(255,255,0,0.7);
+}
+
+.nav-link {
+    color: var(--electric-blue) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--neon-yellow) !important;
+    text-shadow: 0 0 12px rgba(255,255,0,0.8);
+}
+
+.nav-link.active {
+    color: var(--neon-yellow) !important;
+    border-bottom: 3px solid var(--neon-yellow);
+}
+
+/* Flash message mejorado */
+#flash {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1050;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0,240,255,0.6);
+}
