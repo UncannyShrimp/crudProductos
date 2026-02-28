@@ -1,12 +1,5 @@
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<x-layout>
     <h1>BIENVENIDOS A TUTAITA</h1>
     <p>Haga click en el boton de abajo para ver nuestros productos</p>
     <a href="{{ route('productos.index') }}" class="btn btn-primary">Productos</a>
-</body>
-</html>
+</x-layout>
