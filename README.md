@@ -17,11 +17,12 @@ Ideal para pruebas rápidas, portafolios, entrevistas técnicas o como base para
 
 ## Requisitos mínimos
 
-- PHP ≥ 8.1  
-- Composer  
-- Git
+- PHP ≥ 8.1  (instalado)  
+- Composer (instalado)  
+- Git (instalado)  
 
-## Instalación y uso local (paso a paso)
+## Instalación y uso local (paso a paso usando Git Bash)
+![alt text](image-11.png)
 
 1. **Clonar el repositorio**
 
