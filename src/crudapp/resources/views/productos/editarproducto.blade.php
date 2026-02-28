@@ -81,7 +81,7 @@
             </div>
 
             <small class="form-text text-muted mt-1">
-                Al seleccionar una imagen nueva, reemplazará la vista actual en esta pantalla (pero solo se guardará al hacer clic en Actualizar).
+                <!--Al seleccionar una imagen nueva, reemplazará la vista actual en esta pantalla (pero solo se guardará al hacer clic en Actualizar). -->
             </small>
         </div>
 
