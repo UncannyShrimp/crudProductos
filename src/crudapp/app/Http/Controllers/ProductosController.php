@@ -15,7 +15,7 @@ class ProductosController extends Controller
     }
     public function mostrar($id)
     {
-        $producto = Productos::findOrFail($id);
+        $producto = Productos::where('id', $id)->first();
         return view('productos.verproducto',  ["producto" => $producto], ["id" => $id]);
     
     }
@@ -25,10 +25,27 @@ class ProductosController extends Controller
     }
     public function editar($id)
     {
-        //
+        $producto = Productos::where('id', $id)->first();
+        return view('productos.editarproducto', ["producto" => $producto]);
+    
+    }
+    public function guardar(Request $request)
+    {
+        $validated = $request->validate([
+            'nombre' => 'required|string|max:255',
+            'descripcion' => 'required|string|max:255',
+            'precio' => 'required|decimal:2,2',
+            'stock' => 'required|numeric|min:0',
+            'estado' => 'required|boolean',
+            'imagen' => 'required',
+        ]);
+
+        Productos::create($validated);
+
+        return redirect()->route('productos.index');
     }
 
-    public function guardar(Request $request, $id)
+    public function actualizar(Request $request, $id)
     {
         //
     }

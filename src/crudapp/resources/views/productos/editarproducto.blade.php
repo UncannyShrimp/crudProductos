@@ -30,6 +30,6 @@
         </div>
         <button class="btn btn-primary" type="submit">Guardar</button>
         <button class="btn btn-primary" type="reset">Limpiar</button>
-        <a href="/productos" class="btn btn-primary">Volver</a>
+        <a href="{{ route('productos.index') }}" class="btn btn-primary">Volver</a>
     </form>
 </x-layout>

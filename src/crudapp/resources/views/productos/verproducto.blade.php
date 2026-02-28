@@ -14,5 +14,5 @@
             Inactivo
         @endif
     </h2>
-    <a href="/productos">Volver</a>
+    <a href="{{ route('productos.index') }}" class="btn btn-primary">Volver</a>
 </x-layout>
